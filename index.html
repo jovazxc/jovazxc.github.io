@@ -53,12 +53,43 @@
 			border-style: solid;
 			border-color: black;
 			border-width: 2px;
+			padding: 5px;
 		}
 
-		#inputText:active {
+		#inputText:hover {
 			border-style: solid;
 			border-width: 2px;
 			border-color: teal;
+		}
+
+		#inputText:focus {
+			outline: none;
+			border-style: solid;
+			border-width: 2px;
+			border-color: teal;
+		}
+
+		#enviar {
+
+			padding-top: 5px;
+			padding-bottom: 5px;
+			padding-left: 15px;
+			padding-right: 15px;
+			font-family: 'Harry';
+			font-size: 36;
+			border-radius: 8px;
+
+			outline: none;
+			border-width: 2px;
+			border-color: white;
+			border-style: solid;
+		}
+
+		#enviar:focus {
+			outline: none;
+			border-width: 2px;
+			border-color: yellow;
+			border-style: solid;
 		}
 	</style>
 </head>
@@ -78,7 +109,7 @@
 			<input id="inputText" type="tel">
 		</div>
 
-
+		<button id="enviar">enviar</button>
 	</div>
 </body>
 
