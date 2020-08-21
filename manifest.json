@@ -1,6 +1,6 @@
 {
   "short_name": "Diana App",
-  "name": "App para facilitar tu trabajo",
+  "name": "MADE WITH ❤ FOR YOU",
   "icons": [
     {
       "src": "favicon.ico",
@@ -21,5 +21,5 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#000000"
 }
