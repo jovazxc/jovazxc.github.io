@@ -1,10 +1,70 @@
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	</head>
-	
-	<body>
-		<p>hola</p>
-	</body>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		@font-face {
+			font-family: 'Harry';
+			src: url('harry.ttf');
+		}
+
+		@font-face {
+			font-family: 'Stark';
+			src: url('stark.ttf');
+		}
+
+
+		html,
+		body {
+			padding: 0;
+			margin: 0;
+			background-color: #000000;
+		}
+
+		#welcome {
+			font-family: 'Harry';
+			font-size: 46;
+			color: white;
+			margin-top: 25;
+		}
+
+		#center {
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		#label {
+			color: white;
+			padding: 0;
+			margin: 0;
+			font-family: 'Arial';
+			font-weight: bold;
+
+			text-transform: uppercase;
+		}
+
+		#inputBlock {
+			margin-top: 15;
+			margin-bottom: 15;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="center">
+		<p id="welcome">Bienvenida Diana</p>
+
+		<div id="inputBlock">
+			<p id="label">Numero de teléfono</p>
+			<input type="tel">
+		</div>
+
+		<div id="inputBlock">
+			<p id="label">Nombre</p>
+			<input type="tel">
+		</div>
+	</div>
+</body>
 
 </html>
