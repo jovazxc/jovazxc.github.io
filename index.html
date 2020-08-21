@@ -47,6 +47,19 @@
 			margin-top: 15;
 			margin-bottom: 15;
 		}
+
+		#inputText {
+			border-radius: 8px;
+			border-style: solid;
+			border-color: black;
+			border-width: 2px;
+		}
+
+		#inputText:active {
+			border-style: solid;
+			border-width: 2px;
+			border-color: teal;
+		}
 	</style>
 </head>
 
@@ -57,13 +70,15 @@
 
 		<div id="inputBlock">
 			<p id="label">Numero de teléfono</p>
-			<input type="tel">
+			<input id="inputText" type="tel">
 		</div>
 
 		<div id="inputBlock">
 			<p id="label">Nombre</p>
-			<input type="tel">
+			<input id="inputText" type="tel">
 		</div>
+
+
 	</div>
 </body>
 
