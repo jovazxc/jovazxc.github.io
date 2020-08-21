@@ -38,7 +38,7 @@
 			padding: 0;
 			margin: 0;
 			font-family: 'Stark';
-
+			font-size: 22;
 
 			text-transform: uppercase;
 		}
@@ -48,7 +48,7 @@
 			margin-bottom: 15;
 		}
 
-		#inputText {
+		.inputText {
 			border-radius: 8px;
 			border-style: solid;
 			border-color: black;
@@ -56,13 +56,13 @@
 			padding: 5px;
 		}
 
-		#inputText:hover {
+		.inputText:hover {
 			border-style: solid;
 			border-width: 2px;
 			border-color: teal;
 		}
 
-		#inputText:focus {
+		.inputText:focus {
 			outline: none;
 			border-style: solid;
 			border-width: 2px;
@@ -91,6 +91,11 @@
 			border-color: yellow;
 			border-style: solid;
 		}
+
+		#header {
+			color: white;
+			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		}
 	</style>
 </head>
 
@@ -101,16 +106,55 @@
 
 		<div id="inputBlock">
 			<p id="label">Numero de teléfono</p>
-			<input id="inputText" type="tel">
+			<input id="telefono" class="inputText" type="tel">
 		</div>
 
 		<div id="inputBlock">
 			<p id="label">Nombre</p>
-			<input id="inputText" type="tel">
+			<input id="nombre" class="inputText" type="text">
 		</div>
 
-		<button id="enviar">enviar</button>
+		<div id="inputBlock">
+			<p id="label">Selecciona el programa</p>
+			<select id="programa">
+				<option value="22/22">22/22</option>
+				<option value="FAT40">FAT40</option>
+				<option value="U30">U30</option>
+			</select>
+		</div>
+
+		<div id="inputBlock">
+
+			<button id="enviar" onclick='presentarme()'>presentarme</button>
+		</div>
+		<button id="enviar" onclick='preguntar()'>preguntar</button>
+
+		<div style="position: absolute; bottom: 0; width: 100%;">
+			<p id="header">Made with ❤ for you</p>
+		</div>
 	</div>
+
+	<script>
+
+		function presentarme() {
+
+			let telefono = document.getElementById('telefono').value
+			let nombre = document.getElementById('nombre').value
+			let msg = encodeURI(`Buenos días ${nombre}, soy Diana Mendoza de Ludus Magnus, cómo estás?`)
+
+			window.open(`https://wa.me/521${telefono}?text=${msg}`)
+
+		}
+
+		function preguntar() {
+			let telefono = document.getElementById('telefono').value
+			let programa = document.getElementById('programa').value;
+
+			let msg = encodeURI(`Me da gusto, espero que te encuentres bien. La razón por la que nos comunicamos contigo es porque nos gustaría saber el motivo por el cual interrumpiste tu proceso y ver en qué podemos ayudarte para que regreses a tu programa ${programa}`)
+
+			window.open(`https://wa.me/521${telefono}?text=${msg}`)
+		}
+	</script>
 </body>
 
 </html>
